@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Slider with Navbar</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Prompt:wght@200;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-overlay"></div>
+
+    <nav class="navbar">
+        <div class="logo">
+            <img src="https://cdn-icons-png.flaticon.com/512/197/197604.png" alt="logo"> 
+            <span>TRAVEL JAPAN</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="img.html">LOCATION</a></li>
+            <li><a href="about.html">CONTACT US</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="panel active" style="background-image: url('img/lak.avif')">
+            <h3>Lake Kawaguchiko</h3>
+        </div>
+        <div class="panel" style="background-image: url('img/Kifune-Shrine.jpg')">
+            <h3>Kifune Shrine</h3>
+        </div>
+        <div class="panel" style="background-image: url('img/itsuku.jpeg')">
+            <h3>Itsukushima-jinja Shrine</h3>
+        </div>
+        <div class="panel" style="background-image: url('img/himeji.jpg')">
+            <h3>Himeji Castle</h3>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
