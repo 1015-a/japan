@@ -1,0 +1,279 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Prompt', sans-serif;
+    background-color: #000;
+    color: #fff;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column; 
+    position: relative;
+}
+
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+}
+
+.grid-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+    background-size: 20% 100%;
+    pointer-events: none;
+}
+
+/* Navbar */
+.navbar {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 8%;
+    z-index: 1000; 
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 24px;
+    letter-spacing: 2px;
+}
+
+.logo img {
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+    filter: brightness(0) saturate(100%) invert(26%) sepia(89%) saturate(1583%) hue-rotate(338deg) brightness(96%) contrast(92%); /* สีแดง */
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 13px;
+    letter-spacing: 1px;
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    opacity: 1;
+}
+
+/* เนื้อหาหลัก */
+.main-content {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    max-width: 500px;
+    z-index: 5;
+}
+
+.title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 85px;
+    line-height: 0.9;
+    color: #e63946; 
+    margin-bottom: 20px;
+}
+
+.description {
+    font-weight: 200;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    opacity: 0.8;
+    font-size: 14px;
+}
+
+.btn-learn:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.footer-gallery {
+    position: absolute;
+    bottom: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0 5%;
+}
+
+.thumbnail-container {
+    display: flex;
+    gap: 15px;
+}
+
+.thumb {
+    width: 150px;
+    height: 90px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: 0.3s;
+}
+
+.thumb.active, .thumb:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+body {
+    margin: 0;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    font-family: sans-serif;
+}
+
+.container {
+    display: flex;
+    width: 90vw;
+    margin: auto; 
+    margin-top: 100px; 
+    gap: 15px;
+}
+
+.panel {
+    height: 70vh; 
+    flex: 0.5;
+    border-radius: 50px;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    transition: flex 0.7s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+    position: relative;
+}
+
+.panel h3 {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in 0.4s;
+}
+
+.panel.active {
+    flex: 5; 
+}
+
+.panel.active h3 {
+    opacity: 1;
+}
+
+/* --- ส่วนเพิ่มเติมสำหรับหน้า Contact --- */
+.contact-bg {
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                url('https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=1920'); 
+    background-size: cover;
+    background-position: center;
+    filter: blur(2px); 
+}
+
+.contact-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-left: 8%;
+    z-index: 10;
+}
+
+.contact-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    padding: 50px;
+    border-radius: 30px;
+    width: 450px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contact-card h2 {
+    font-size: 28px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+
+.contact-card p {
+    margin-bottom: 30px;
+    opacity: 0.8;
+    font-weight: 200;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.input-group input, .input-group textarea {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 10px 0;
+    color: #fff;
+    font-family: 'Prompt', sans-serif;
+    outline: none;
+}
+
+.input-group input::placeholder, .input-group textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* ปุ่ม Send */
+.btn-send {
+    width: 100%;
+    padding: 12px;
+    background: #fff;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Prompt', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 20px;
+}
+
+.btn-send:hover {
+    background: #e63946;
+    color: #fff;
+}
+
+.btn-book {
+    border: 1px solid #fff;
+    padding: 5px 20px !important;
+    border-radius: 20px;
+}
+
